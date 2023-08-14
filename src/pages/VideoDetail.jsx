@@ -7,14 +7,14 @@ function VideoDetail() {
     const [comments, setComments] = useState([]);
     const [video, setVideo] = useState([]);
     useEffect(() => { 
-        axios.get(`https://erin-nice-zebra.cyclic.app/api/video/${id}/products`).then((response) => {
+        axios.get(`https://pleasant-pinafore-elk.cyclic.app/api/video/${id}/products`).then((response) => {
             // console.log(response.data[0].products);
             setProducts(response.data[0].products);
             // console.log(response.data[0].url_video);
             setVideo(response.data[0].url_video);
             // console.log(products);
         });
-        axios.get(`https://erin-nice-zebra.cyclic.app/api/video/${id}/comments`).then((response) => {
+        axios.get(`https://pleasant-pinafore-elk.cyclic.app/api/video/${id}/comments`).then((response) => {
             // console.log(response.data[0].products);
             // setProducts(response.data[0].products);
             setComments(response.data[0].comments);
@@ -81,7 +81,7 @@ function submitComment(id) {
         "comment": comment
     };
 
-    axios.post('https://erin-nice-zebra.cyclic.app/api/comment', commentObject).then((response) => {
+    axios.post('https://pleasant-pinafore-elk.cyclic.app/api/comment', commentObject).then((response) => {
         console.log(response);
         window.location.reload(false);
     })

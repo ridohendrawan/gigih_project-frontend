@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function Content() {
     const [videos, setVideos] = useState([]);
     useEffect(() => {
-        axios.get('https://erin-nice-zebra.cyclic.app/api/video').then((response) => {
+        axios.get('https://pleasant-pinafore-elk.cyclic.app/api/video').then((response) => {
             console.log(response.data);
             setVideos(response.data);
         })
